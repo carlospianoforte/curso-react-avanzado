@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "vercel-build": "npm run build",
     "build": "webpack",
     "lint": "standard",
     "dev": "webpack-dev-server",
@@ -22,7 +23,9 @@
   },
   "dependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.5"
   },
   "standard": {
     "ignore": [
