@@ -22,7 +22,13 @@
     "webpack-dev-server": "^4.9.1"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^16.5.0",
+    "intersection-observer": "^0.12.2",
     "react": "^18.1.0",
+    "react-apollo": "^3.1.5",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
     "styled-components": "^5.3.5"
