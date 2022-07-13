@@ -1,32 +1,41 @@
 import React from 'react'
-import { ImgWraper, Img, Button, Article } from './styles'
-import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
-import { useLocalStorage } from '../../hooks/useLocalStorage'
+import { ImgWraper, Img, Article } from './styles'
 import { useNearScreen } from '../../hooks/useNearScreen'
+import { FavButton } from '../FavButton'
+import { ToggleLikeMutation } from '../../container/ToggleLikeMutation'
+import { Link } from 'react-router-dom'
 
 const DEFAULT_IMAGE = 'https://via.placeholder.com/150'
 
-export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
+export const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
   const [show, element] = useNearScreen()
-  const key = `like-${id}`
-  const [liked, setLiked] = useLocalStorage(key, false)
-
-  console.log(liked)
-
-  const Icon = liked ? MdFavorite : MdFavoriteBorder
 
   return (
     <Article ref={element}>
       {show &&
         <>
-          <a href={`/detail/${id}`}>
+          <Link to={`/detail/${id}`}>
             <ImgWraper>
-              <Img src={src} alt='' />
+              <Img src={src} />
             </ImgWraper>
-          </a>
-          <Button onClick={() => setLiked(!liked)}>
-            <Icon size='32px' /> {likes} likes!
-          </Button>
+          </Link>
+
+          <ToggleLikeMutation>
+            {
+              (toggleLike) => {
+                const handleFavClick = () => {
+                  toggleLike({
+                    variables: {
+                      input: { id }
+                    }
+                  })
+                }
+
+                return <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
+              }
+            }
+          </ToggleLikeMutation>
+
         </>}
     </Article>
   )

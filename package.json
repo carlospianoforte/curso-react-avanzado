@@ -7,7 +7,7 @@
     "vercel-build": "npm run build",
     "build": "webpack",
     "lint": "standard",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --history-api-fallback",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "babel-loader": "^8.2.5",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "standard": "^17.0.0",
     "webpack": "^5.73.0",
@@ -25,12 +26,17 @@
     "@apollo/client": "^3.6.9",
     "@apollo/react-hooks": "^4.0.0",
     "apollo-boost": "^0.4.9",
+    "css-loader": "^6.7.1",
     "graphql": "^16.5.0",
     "intersection-observer": "^0.12.2",
     "react": "^18.1.0",
     "react-apollo": "^3.1.5",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
     "styled-components": "^5.3.5"
   },
   "standard": {
