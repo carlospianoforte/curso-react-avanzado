@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import { UserForm } from '../components/UserForm'
 import { Img } from '../components/UserForm/styles'
-import dog from '../assets/static/dog.png'
-import { useRegisterMutation } from '../hooks/useRegisterMutation'
+/* import dog from '../assets/static/dog.png'
+ */import { useRegisterMutation } from '../hooks/useRegisterMutation'
 import { useLoginMutation } from '../hooks/useLoginMutation'
+import { Layout } from '../components/Layout'
 
 export const NotRegisteredUser = () => {
   const { activateAuth } = useContext(AppContext)
@@ -36,8 +37,8 @@ export const NotRegisteredUser = () => {
   const errorMsgLogin = errorLogin && 'El usuario o contraseña es incorrecto'
 
   return (
-    <>
-      <Img src={dog} />
+    <Layout title='Registrate' >
+      <Img src='https://svgsilh.com/svg/1710298.svg' />
       <UserForm
         title='Registrarse'
         error={errorMsg}
@@ -50,6 +51,6 @@ export const NotRegisteredUser = () => {
         onSubmit={onSubmitLogin}
         disabled={loadingLogin}
       />
-    </>
+    </Layout>
   )
 }
