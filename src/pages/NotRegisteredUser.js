@@ -37,7 +37,7 @@ export const NotRegisteredUser = () => {
   const errorMsgLogin = errorLogin && 'El usuario o contraseña es incorrecto'
 
   return (
-    <Layout title='Registrate' >
+    <Layout>
       <Img src='https://svgsilh.com/svg/1710298.svg' />
       <UserForm
         title='Registrarse'
@@ -51,6 +51,8 @@ export const NotRegisteredUser = () => {
         onSubmit={onSubmitLogin}
         disabled={loadingLogin}
       />
+      <br />
+      <br />
     </Layout>
   )
 }

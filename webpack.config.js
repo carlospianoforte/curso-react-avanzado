@@ -1,7 +1,7 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
+/* const path = require('path')
+ */const HtmlWebpackPlugin = require('html-webpack-plugin')
+/* const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin') */
 module.exports = {
   mode: 'development',
   output: {
@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    }),
+    })/* ,
     new WebpackPwaManifestPlugin({
       name: 'Petgram - Your pet photos app',
       shortname: 'Petgram -🐱',
@@ -44,7 +44,7 @@ module.exports = {
         }
       ],
       maximumFileSizeToCacheInBytes: 50000000
-    })
+    }) */
   ],
   module: {
     rules: [

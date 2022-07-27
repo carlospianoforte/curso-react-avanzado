@@ -40,7 +40,7 @@ export const Title = styled.h2`
     
 `
 export const Img = styled.img`
-    width: 350px;
+    width: 250px;
     padding: 30px;
     margin: auto;
     display: block;

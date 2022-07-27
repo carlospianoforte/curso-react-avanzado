@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
         
         ul, li, h1, h2, h3, p, button {
                 margin: 0;
+                margin-right:20px;
         }
 
         ul {
@@ -28,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
                 background: #fefefe;
                 height: 100vh;
                 margin: 0 auto;
-                max-width: 500px;
+                max-width: 600px;
                 overscroll-behavior: none;
                 width: 100%;
         }
